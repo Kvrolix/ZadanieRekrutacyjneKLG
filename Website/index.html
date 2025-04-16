@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<title>Zadanko KLG</title>
+
+		<link
+			rel="stylesheet"
+			href="styles.css" />
+		<link
+			rel="preconnect"
+			href="https://fonts.googleapis.com" />
+		<link
+			rel="preconnect"
+			href="https://fonts.gstatic.com"
+			crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Shippori+Mincho&display=swap"
+			rel="stylesheet" />
+
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+	</head>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+	<body>
+		<header class="navigation">
+			<ul class="navigation__logo">
+				<li>
+					<img
+						class="logo-icon"
+						src="src/icons/Default.svg"
+						alt="Logo" />
+
+					<span>FORMA'SINT.</span>
+				</li>
+				<li>idomods &lt;/&gt;</li>
+			</ul>
+
+			<ul class="navigation__menu">
+				<li>
+					<a
+						href="#"
+						data-target="hero"
+						>Home</a
+					>
+				</li>
+				<li>
+					<a
+						href="#"
+						data-target="featured"
+						>Featured Products</a
+					>
+				</li>
+				<li>
+					<a
+						href="#"
+						data-target="products"
+						>Product Listing</a
+					>
+				</li>
+			</ul>
+			<ul class="navigation__profile">
+				<li>
+					<span>
+						<img src="src/icons/icon_user.svg" />
+					</span>
+				</li>
+				<li>Frontend developer</li>
+			</ul>
+		</header>
+		<section
+			id="hero"
+			class="hero">
+			<img
+				class="hero__text"
+				src="src/icons/LOGO FORMA.svg" />
+			<!-- Obrazek musi zostac zmniejszony w programie -->
+			<div class="hero__img-container">
+				<img
+					class="hero__img"
+					src="src/images/heroIMG.jpeg"
+					alt="Climber on ice" />
+			</div>
+		</section>
+		<section
+			id="featured"
+			class="featured">
+			<h2>Featured Products</h2>
+			<h1>Browse Featured</h1>
+			<div class="swiper featured__swiper">
+				<div class="swiper-wrapper">
+					<!-- <div class="featured__products"> -->
+					<div class="swiper-slide featured__product">
+						<!-- FEATURED ITEMS WILL BE ADDED HERE FROM JS -->
+					</div>
+				</div>
+
+				<!-- Strzałki -->
+				<div class="swiper-button-prev custom-arrow">
+					<img
+						src="src/icons/slider_arrow_left.svg"
+						alt="Previous" />
+				</div>
+				<div class="swiper-button-next custom-arrow featured__arrow">
+					<img
+						src="src/icons/slider_arrow_right.svg"
+						alt="Next" />
+				</div>
+			</div>
+		</section>
+		<section
+			id="products"
+			class="products__gallery">
+			<div class="products__header">
+				<h3>Number of products per page</h3>
+				<!-- <div class="products__pagination-number"><span>14</span><img src="src/icons/arr_down.svg" /></div> -->
+				<div
+					class="products__pagination-number"
+					id="dropdown-toggle">
+					<span id="selected-count">14</span>
+					<img
+						id="chevron-icon"
+						src="src/icons/arr_down.svg" />
+					<ul
+						id="page-options"
+						class="hidden">
+						<li data-size="14">14</li>
+						<li data-size="18">18</li>
+						<li data-size="24">24</li>
+						<li data-size="36">36</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="products__grid">
+				<!-- TUTAJ DODANE SA KURTKI -->
+
+				<!-- <div class="products__grid-item">
+					<span>id: 01</span>
+
+					<img src="src/images/products/jacket.png" />
+				</div> -->
+
+				<!-- BANNER  -->
+				<div class="products__grid-banner">
+					<div class="products__grid-banner--text">
+						<h4>forma'sint.</h4>
+						<h2>You'll look and feel like the champion.</h2>
+					</div>
+					<button class="products__grid-banner--cta">
+						<span>check this out</span><img src="src/icons/chevron_right.svg" />
+					</button>
+					<!-- CONVERT THE IMG TO PNG TO REDUCE SIZE -->
+					<div class="products__grid-banner--img">
+						<img src="src/images/banner.jpeg" />
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- MODAL -->
+		<div
+			class="modal hidden"
+			id="productModal">
+			<div class="modal__overlay"></div>
+			<div class="modal__content">
+				<div class="modal__header">
+					<span id="modal-id">ID: --</span>
+					<button
+						id="modal-close"
+						class="modal__close">
+						<img
+							src="src/icons/close.svg"
+							alt="Close" />
+						<span>close</span>
+					</button>
+				</div>
+				<img
+					id="modal-img"
+					src=""
+					alt="Product" />
+			</div>
+		</div>
+
+		<!-- MOBILE MENU -->
+		<button
+			id="menuToggle"
+			class="hamburger-menu">
+			<img
+				src="src/icons/hamburger.svg"
+				alt="Menu" />
+		</button>
+
+		<!-- MENU OVERLAY  -->
+		<div
+			id="menuOverlay"
+			class="mobile-menu__overlay hidden"></div>
+
+		<div
+			class="mobile-menu hidden"
+			id="mobileMenu">
+			<div class="mobile-menu__header">
+				<div class="mobile-menu__logo">
+					<img
+						src="src/icons/Default.svg"
+						alt="Logo" />
+				</div>
+				<button
+					id="menuClose"
+					class="mobile-menu__close">
+					<img
+						src="src/icons/close.svg"
+						alt="Close" />
+					<span>CLOSE</span>
+				</button>
+			</div>
+
+			<ul class="mobile-menu__nav">
+				<li>
+					<a
+						href="#"
+						data-target="hero"
+						>HOME</a
+					>
+				</li>
+				<li>
+					<a
+						href="#"
+						data-target="featured"
+						>FEATURED PRODUCTS</a
+					>
+				</li>
+				<li>
+					<a
+						href="#"
+						data-target="products"
+						>PRODUCT LISTING</a
+					>
+				</li>
+			</ul>
+		</div>
+
+		<script src="script.js"></script>
+	</body>
+</html>
+
+<!-- chce stworzyc grid layout:
+- obrazek z tylu
+- tekst na gornej warstwie 
+
+
+obrazek musi zajmowac cala przestrzen
+-->
