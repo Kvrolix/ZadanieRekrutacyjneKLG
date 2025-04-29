@@ -72,12 +72,13 @@ html {
 .logo-icon {
 	width: 2.4rem;
 	height: 2.4rem;
-	transition: all 0.5s ease;
+	background-image: url('src/icons/Default.svg');
+	background-size: cover;
+	transition: background-image 0.3s ease;
 }
 
 .navigation__logo li:hover .logo-icon {
-	content: url('src/icons/Fill.svg');
-	/* transition: background-image 0.3s ease, opacity 0.3s ease; */
+	background-image: url('src/icons/Fill.svg');
 }
 .navigation__logo span {
 	margin-left: 1.2rem;
@@ -202,6 +203,7 @@ html {
 	transition: all 0.3s ease;
 	max-width: fit-content;
 	cursor: pointer;
+	/* border: 1px solid salmon; */
 }
 
 .featured__product--img {
@@ -210,6 +212,9 @@ html {
 	margin-bottom: 2.4rem;
 	border-radius: 6px;
 	min-height: 44rem;
+}
+.featured__product--img img {
+	max-width: 100%;
 }
 
 .featured__product--text {
@@ -226,7 +231,9 @@ html {
 	flex-direction: row;
 	align-items: center;
 	justify-content: space-between;
-	margin: 1.6rem 1.6rem 0 1.6rem;
+
+	padding: 1.6rem 1.6rem 0 1.6rem;
+	min-width: 100%;
 }
 
 .featured__product--img--text div {
@@ -244,7 +251,7 @@ html {
 .featured__product--heart {
 	cursor: pointer;
 	z-index: 10;
-	margin-right: 2.4rem;
+	/* margin-right: 2.4rem; */
 }
 
 /* --- SWIPPER */
@@ -257,17 +264,6 @@ html {
 	max-height: 100%;
 }
 
-/* .featured__swiper::after {
-	content: '';
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	width: 0%;
-	height: 1px;
-	background: #1d1d1d;
-	transition: width 0.3s ease;
-} */
-
 .featured__product {
 	position: relative;
 	cursor: pointer;
@@ -275,27 +271,9 @@ html {
 	padding-bottom: 6.4rem;
 }
 
-/* .featured__product::after {
-	content: '';
-	position: absolute;
-	left: 0;
-	bottom: 0;
-	width: 0%;
-	height: 3px;
-	background-color: black;
-	transition: width 0.3s ease;
-	overflow: visible !important;
-}
-
-.featured__product:hover::after {
-	width: 100%;
-} */
-
 .swiper-scrollbar {
 	height: 1px;
 	background: #1d1d1d;
-	/* border-radius: 3px; */
-	/* margin-top: 1rem; */
 }
 
 .swiper-scrollbar-drag {
@@ -305,6 +283,9 @@ html {
 
 .swiper-slide {
 	overflow: visible !important;
+	width: fit-content;
+	/* border: 1px solid blue; */
+	/* padding: 1.2rem; */
 }
 
 /* --- SWIPER BUTTONS */
@@ -761,7 +742,7 @@ html {
 		line-height: 1.2;
 	}
 	.featured__product--heart {
-		margin-right: 3.4rem;
+		/* margin-right: 3.4rem; */
 	}
 
 	.products__gallery {

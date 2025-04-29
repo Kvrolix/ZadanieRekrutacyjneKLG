@@ -222,6 +222,7 @@ const swiper = new Swiper('.featured__swiper', {
 	speed: 600,
 	slidesPerView: 2,
 	spaceBetween: 10,
+
 	navigation: {
 		nextEl: '.swiper-button-next',
 		prevEl: '.swiper-button-prev',
@@ -241,6 +242,9 @@ const swiper = new Swiper('.featured__swiper', {
 			slidesPerView: 2,
 		},
 		1024: {
+			slidesPerView: 3,
+		},
+		1400: {
 			slidesPerView: 4,
 		},
 	},
