@@ -127,7 +127,7 @@ optionsList.addEventListener('click', (e) => {
 // ------------- DROPDOWN MENU
 
 function addHeartListeners() {
-	const hearts = document.querySelectorAll('.featured__product--heart img');
+	const hearts = document.querySelectorAll('.featured__product--heart-icon');
 
 	hearts.forEach((heart) => {
 		heart.addEventListener('click', (e) => {
@@ -135,7 +135,9 @@ function addHeartListeners() {
 
 			const isEmpty = heart.dataset.state === 'empty';
 
-			heart.src = isEmpty ? 'src/icons/heart_fill.svg' : 'src/icons/heart_empty.svg';
+			heart.style.backgroundImage = isEmpty
+				? "url('src/icons/heart_fill.svg')"
+				: "url('src/icons/heart_empty.svg')";
 
 			heart.dataset.state = isEmpty ? 'filled' : 'empty';
 		});
@@ -156,7 +158,10 @@ function createFeaturedProduct(product) {
 						? `<div style="background-color: ${product.tagColor};">${product.tag}</div>`
 						: `<div style="visibility: hidden">tag</div>`
 				}
-				<span class="featured__product--heart"><img src="src/icons/heart_empty.svg" data-state="empty" /></span>
+				<span class="featured__product--heart">
+				<div class="featured__product--heart-icon" data-state="empty">
+				 </div>
+				</span>
 			</div>
 			<img src="${product.img}" alt="${product.title}" />
 		</div>
@@ -168,6 +173,30 @@ function createFeaturedProduct(product) {
 
 	return slide;
 }
+// function createFeaturedProduct(product) {
+// 	const slide = document.createElement('div');
+// 	slide.classList.add('swiper-slide', 'featured__product');
+
+// 	slide.innerHTML = `
+// 		<div class="featured__product--img">
+// 			<div class="featured__product--img--text">
+// 				${
+// 					product.tag
+// 						? `<div style="background-color: ${product.tagColor};">${product.tag}</div>`
+// 						: `<div style="visibility: hidden">tag</div>`
+// 				}
+// 				<span class="featured__product--heart"><img src="src/icons/heart_empty.svg" data-state="empty" /></span>
+// 			</div>
+// 			<img src="${product.img}" alt="${product.title}" />
+// 		</div>
+// 		<div class="featured__product--text">
+// 			<h3>${product.title}</h3>
+// 			<h4>${product.price}</h4>
+// 		</div>
+// 	`;
+
+// 	return slide;
+// }
 
 function renderFeaturedProducts() {
 	const wrapper = document.querySelector('.swiper-wrapper');
