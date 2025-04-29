@@ -218,12 +218,19 @@ function attachCardListeners() {
 
 const swiper = new Swiper('.featured__swiper', {
 	loop: true,
-	loopAddBlankSlides: false,
-	slidesPerView: 4,
+	grabCursor: true,
+	speed: 600,
+	slidesPerView: 2,
 	spaceBetween: 10,
 	navigation: {
 		nextEl: '.swiper-button-next',
 		prevEl: '.swiper-button-prev',
+	},
+	scrollbar: {
+		el: '.swiper-scrollbar',
+		draggable: true,
+		dragSize: 'auto',
+		hide: true,
 	},
 
 	breakpoints: {

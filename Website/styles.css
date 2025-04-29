@@ -26,7 +26,7 @@ html {
 }
 .body {
 	margin: 0 4.2rem 0 4.2rem;
-	width: 100dvw;
+	max-width: 100%;
 }
 
 .navigation {
@@ -44,7 +44,7 @@ html {
 	margin: 0 4.2rem 8rem 0;
 
 	/* border: 1px solid salmon; */
-	width: 100dvw;
+	max-width: 100%;
 }
 
 .navigation ul {
@@ -77,6 +77,7 @@ html {
 
 .navigation__logo li:hover .logo-icon {
 	content: url('src/icons/Fill.svg');
+	/* transition: background-image 0.3s ease, opacity 0.3s ease; */
 }
 .navigation__logo span {
 	margin-left: 1.2rem;
@@ -202,7 +203,6 @@ html {
 
 .featured__product--img {
 	display: grid;
-
 	background-color: var(--product-background);
 	margin-bottom: 2.4rem;
 	border-radius: 6px;
@@ -248,12 +248,13 @@ html {
 
 .featured__swiper {
 	position: relative;
-	max-width: 100%;
+	/* max-width: 100%; */
+	width: 100%;
 	border-bottom: 1px solid #eaeae8;
 	max-height: 100%;
 }
 
-.featured__swiper::after {
+/* .featured__swiper::after {
 	content: '';
 	position: absolute;
 	bottom: 0;
@@ -262,7 +263,7 @@ html {
 	height: 1px;
 	background: #1d1d1d;
 	transition: width 0.3s ease;
-}
+} */
 
 .featured__product {
 	position: relative;
@@ -271,7 +272,7 @@ html {
 	padding-bottom: 6.4rem;
 }
 
-.featured__product::after {
+/* .featured__product::after {
 	content: '';
 	position: absolute;
 	left: 0;
@@ -285,6 +286,18 @@ html {
 
 .featured__product:hover::after {
 	width: 100%;
+} */
+
+.swiper-scrollbar {
+	height: 1px;
+	background: #1d1d1d;
+	/* border-radius: 3px; */
+	/* margin-top: 1rem; */
+}
+
+.swiper-scrollbar-drag {
+	background: #1d1d1d;
+	border-radius: 3px;
 }
 
 .swiper-slide {
@@ -667,9 +680,9 @@ html {
 }
 
 .hamburger-menu {
-	position: fixed; /* zmienione z absolute */
+	position: fixed;
 	top: 3.2rem;
-	right: 3.2rem;
+	right: 2.4rem;
 	background: none;
 	border: none;
 	cursor: pointer;
