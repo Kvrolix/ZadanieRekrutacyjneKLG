@@ -131,7 +131,7 @@ function addHeartListeners() {
 
 	hearts.forEach((heart) => {
 		heart.addEventListener('click', (e) => {
-			e.stopPropagation(); // zapobiega klikaniu w całego slajda
+			e.stopPropagation();
 
 			const isEmpty = heart.dataset.state === 'empty';
 
@@ -173,30 +173,6 @@ function createFeaturedProduct(product) {
 
 	return slide;
 }
-// function createFeaturedProduct(product) {
-// 	const slide = document.createElement('div');
-// 	slide.classList.add('swiper-slide', 'featured__product');
-
-// 	slide.innerHTML = `
-// 		<div class="featured__product--img">
-// 			<div class="featured__product--img--text">
-// 				${
-// 					product.tag
-// 						? `<div style="background-color: ${product.tagColor};">${product.tag}</div>`
-// 						: `<div style="visibility: hidden">tag</div>`
-// 				}
-// 				<span class="featured__product--heart"><img src="src/icons/heart_empty.svg" data-state="empty" /></span>
-// 			</div>
-// 			<img src="${product.img}" alt="${product.title}" />
-// 		</div>
-// 		<div class="featured__product--text">
-// 			<h3>${product.title}</h3>
-// 			<h4>${product.price}</h4>
-// 		</div>
-// 	`;
-
-// 	return slide;
-// }
 
 function renderFeaturedProducts() {
 	const wrapper = document.querySelector('.swiper-wrapper');
@@ -211,7 +187,7 @@ function renderFeaturedProducts() {
 
 renderFeaturedProducts();
 
-// ------------- MODAL PRODUKTU
+// ------------- PRODUCT MODAL
 
 const modal = document.getElementById('productModal');
 const modalImg = document.getElementById('modal-img');
@@ -275,6 +251,9 @@ const swiper = new Swiper('.featured__swiper', {
 		},
 		1400: {
 			slidesPerView: 4,
+		},
+		1700: {
+			slidesPerView: 5,
 		},
 	},
 });

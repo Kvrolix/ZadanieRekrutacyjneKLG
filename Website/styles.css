@@ -43,7 +43,6 @@ html {
 	padding: 3.2rem;
 	margin: 0 4.2rem 8rem 0;
 
-	/* border: 1px solid salmon; */
 	max-width: 100%;
 }
 
@@ -202,8 +201,6 @@ html {
 	position: relative;
 	transition: all 0.3s ease;
 	max-width: fit-content;
-	cursor: pointer;
-	/* border: 1px solid salmon; */
 }
 
 .featured__product--img {
@@ -268,18 +265,6 @@ html {
 	scale: 1.3;
 }
 
-/* .logo-icon {
-	width: 2.4rem;
-	height: 2.4rem;
-	background-image: url('src/icons/Default.svg');
-	background-size: cover;
-	transition: background-image 0.3s ease;
-}
-
-.navigation__logo li:hover .logo-icon {
-	background-image: url('src/icons/Fill.svg');
-} */
-
 /* --- SWIPPER */
 
 .featured__swiper {
@@ -310,8 +295,6 @@ html {
 .swiper-slide {
 	overflow: visible !important;
 	width: fit-content;
-	/* border: 1px solid blue; */
-	/* padding: 1.2rem; */
 }
 
 /* --- SWIPER BUTTONS */
@@ -733,7 +716,6 @@ html {
 		display: none !important;
 	}
 
-	/* TODO: on medium screen the height property must be added so it will start from the beginning */
 	.hero__text {
 		margin-bottom: 2.4rem;
 	}
