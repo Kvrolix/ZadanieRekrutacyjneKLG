@@ -1,0 +1,88 @@
+const featuredProducts = [
+	{
+		title: 'Dark Blue Alpine Climbing Jacket',
+		price: '€300 EUR',
+		img: 'src/images/products/product_photo_01.png',
+		tag: 'Best Seller',
+		tagColor: '#d9d6b0',
+	},
+	{
+		title: 'Orange Helmet for alpine TOUNDRA',
+		price: '€300 EUR',
+		img: 'src/images/products/product_photo_02.png',
+		tag: 'limited edition',
+		tagColor: '#d4b0d9',
+	},
+	{
+		title: 'Grey Alpine Climbing Jacket',
+		price: '€300 EUR',
+		img: 'src/images/products/product_photo_03.png',
+		tag: false,
+		tagColor: '',
+	},
+	{
+		title: 'Red Thermal Jacket',
+		price: '€300 EUR',
+		img: 'src/images/products/product_photo_01.png',
+		tag: 'Best Seller',
+		tagColor: '#d9d6b0',
+	},
+	{
+		title: 'Dark Blue Alpine Climbing Jacket',
+		price: '€300 EUR',
+		img: 'src/images/products/product_photo_01.png',
+		tag: 'Best Seller',
+		tagColor: '#d9d6b0',
+	},
+	{
+		title: 'Orange Helmet for alpine TOUNDRA',
+		price: '€300 EUR',
+		img: 'src/images/products/product_photo_02.png',
+		tag: 'limited edition',
+		tagColor: '#d4b0d9',
+	},
+	{
+		title: 'Grey Alpine Climbing Jacket',
+		price: '€300 EUR',
+		img: 'src/images/products/product_photo_03.png',
+		tag: false,
+		tagColor: '',
+	},
+	{
+		title: 'Red Thermal Jacket',
+		price: '€300 EUR',
+		img: 'src/images/products/product_photo_01.png',
+		tag: 'Best Seller',
+		tagColor: '#d9d6b0',
+	},
+	{
+		title: 'Dark Blue Alpine Climbing Jacket',
+		price: '€300 EUR',
+		img: 'src/images/products/product_photo_01.png',
+		tag: 'Best Seller',
+		tagColor: '#d9d6b0',
+	},
+	{
+		title: 'Orange Helmet for alpine TOUNDRA',
+		price: '€300 EUR',
+		img: 'src/images/products/product_photo_02.png',
+		tag: 'limited edition',
+		tagColor: '#d4b0d9',
+	},
+	{
+		title: 'Grey Alpine Climbing Jacket',
+		price: '€300 EUR',
+		img: 'src/images/products/product_photo_03.png',
+		tag: false,
+		tagColor: '',
+	},
+	{
+		title: 'Red Thermal Jacket',
+		price: '€300 EUR',
+		img: 'src/images/products/product_photo_01.png',
+		tag: 'Best Seller',
+		tagColor: '#d9d6b0',
+	},
+];
+
+export default featuredProducts;
