@@ -40,12 +40,10 @@ html {
 	z-index: 1000;
 	background-color: white;
 
-	/* padding: 3.2rem 0 3.2rem 0; */
 	padding: 3.2rem;
-	/* margin: 0 4.2rem 8rem 4.2rem; */
 	margin: 0 4.2rem 8rem 0;
 
-	border: 1px solid salmon;
+	/* border: 1px solid salmon; */
 	width: 100dvw;
 }
 

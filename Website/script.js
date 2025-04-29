@@ -217,6 +217,8 @@ function attachCardListeners() {
 // ------------- SWIPER
 
 const swiper = new Swiper('.featured__swiper', {
+	loop: true,
+	loopAddBlankSlides: false,
 	slidesPerView: 4,
 	spaceBetween: 10,
 	navigation: {
