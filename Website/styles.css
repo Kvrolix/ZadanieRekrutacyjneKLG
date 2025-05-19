@@ -107,7 +107,7 @@ html {
 	position: relative;
 	text-decoration: none;
 	font-size: 1.6rem;
-	color: black;
+	color: var(--text-color-1);
 	font-weight: 500;
 	cursor: pointer;
 }
@@ -202,7 +202,7 @@ html {
 	flex-direction: row;
 	row-gap: 1rem;
 	padding-bottom: 6.4rem;
-	border-bottom: 1px solid #1d1d1d;
+	/* border-bottom: 1px solid #1d1d1d; */
 	position: relative;
 }
 
@@ -293,13 +293,8 @@ html {
 }
 
 .swiper-scrollbar {
-	height: 1px;
+	height: 1px !important;
 	background: #1d1d1d;
-}
-
-.swiper-scrollbar-drag {
-	background: #1d1d1d;
-	border-radius: 3px;
 }
 
 .swiper-slide {
@@ -727,9 +722,12 @@ html {
 /* ++++++++++ MOBILE MENU OVERLAY END ++++++++++*/
 
 @media (max-width: 1000px) {
+	/* NAVIGATION SECTION */
+
 	.navigation__logo li:nth-child(2) {
 		display: none !important;
 	}
+
 	.hamburger-menu {
 		display: block;
 	}
@@ -740,17 +738,19 @@ html {
 		display: none !important;
 	}
 
-	.hero__text {
-		margin-bottom: 2.4rem;
-	}
-
 	.navigation {
 		padding: 3.2rem 0 3.2rem 0;
 		margin: 0 1.6rem 6.4rem 1.6rem;
 	}
 
+	/* HERO  SECTION */
+
 	.hero {
 		margin: 0 1.6rem 0 1.6rem;
+	}
+
+	.hero__text {
+		margin-bottom: 2.4rem;
 	}
 
 	.hero__img {
@@ -762,6 +762,8 @@ html {
 	.featured {
 		margin: 3.6rem 1.6rem;
 	}
+
+	/* FEATURED SECTION */
 
 	.featured h1 {
 		font-size: 3.2rem;
@@ -781,6 +783,7 @@ html {
 	.products__gallery {
 		margin: 2.4rem 1.6rem 6.4rem 1.6rem;
 	}
+
 	.products__header {
 		display: flex;
 		flex-direction: column;
@@ -822,7 +825,7 @@ html {
 
 /* NAVIGATON BAR DOESN'T LOOK GOOD AT THIS STAGE */
 
-@media (1001px < width <= 1200px) {
+@media (1001px < width <= 1300px) {
 	.hamburger-menu {
 		display: none !important;
 	}
@@ -839,7 +842,6 @@ html {
 		grid-template-columns: repeat(2, minmax(15.8rem, 1fr));
 		gap: 1.2rem;
 		max-width: 100%;
-		border: 1px solid red;
 	}
 
 	.navigation__menu a {
@@ -854,6 +856,3 @@ html {
 		gap: 1.8rem;
 	}
 }
-
-/* TODO */
-/* - navigation bar at 1000 doesn't thtake the entire width */

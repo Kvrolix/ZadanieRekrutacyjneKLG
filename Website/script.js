@@ -1,5 +1,5 @@
 import featuredProducts from './data/featuredProducts.js';
-console.log(featuredProducts);
+// console.log(featuredProducts);
 // -------------  SMOOTH SCROLL
 
 document.querySelectorAll('a[data-target]').forEach((link) => {
@@ -15,34 +15,6 @@ document.querySelectorAll('a[data-target]').forEach((link) => {
 			window.scrollTo({ top: y, behavior: 'smooth' });
 		}
 	});
-});
-
-// ------------- MOBILE MENU
-
-const menuToggle = document.getElementById('menuToggle');
-const menuClose = document.getElementById('menuClose');
-const mobileMenu = document.getElementById('mobileMenu');
-const menuOverlay = document.getElementById('menuOverlay');
-const navLinks = document.querySelectorAll('.mobile-menu__nav a');
-
-function closeMenu() {
-	mobileMenu.classList.add('hidden');
-	menuOverlay.classList.add('hidden');
-	menuToggle.style.display = 'block';
-}
-
-function openMenu() {
-	mobileMenu.classList.remove('hidden');
-	menuOverlay.classList.remove('hidden');
-	menuToggle.style.display = 'none';
-}
-
-menuToggle.addEventListener('click', openMenu);
-menuClose.addEventListener('click', closeMenu);
-menuOverlay.addEventListener('click', closeMenu);
-
-navLinks.forEach((link) => {
-	link.addEventListener('click', closeMenu);
 });
 
 // ------------- LOADING THE PRODUCTS
@@ -124,26 +96,6 @@ optionsList.addEventListener('click', (e) => {
 	}
 });
 
-// ------------- DROPDOWN MENU
-
-function addHeartListeners() {
-	const hearts = document.querySelectorAll('.featured__product--heart-icon');
-
-	hearts.forEach((heart) => {
-		heart.addEventListener('click', (e) => {
-			e.stopPropagation();
-
-			const isEmpty = heart.dataset.state === 'empty';
-
-			heart.style.backgroundImage = isEmpty
-				? "url('src/icons/heart_fill.svg')"
-				: "url('src/icons/heart_empty.svg')";
-
-			heart.dataset.state = isEmpty ? 'filled' : 'empty';
-		});
-	});
-}
-
 // ------------- GENERATE SINGLE SLIDE
 
 function createFeaturedProduct(product) {
@@ -219,6 +171,54 @@ function attachCardListeners() {
 	});
 }
 
+// ------------- MOBILE MENU
+
+const menuToggle = document.getElementById('menuToggle');
+const menuClose = document.getElementById('menuClose');
+const mobileMenu = document.getElementById('mobileMenu');
+const menuOverlay = document.getElementById('menuOverlay');
+const navLinks = document.querySelectorAll('.mobile-menu__nav a');
+
+function closeMenu() {
+	mobileMenu.classList.add('hidden');
+	menuOverlay.classList.add('hidden');
+	menuToggle.style.display = 'block';
+}
+
+function openMenu() {
+	mobileMenu.classList.remove('hidden');
+	menuOverlay.classList.remove('hidden');
+	menuToggle.style.display = 'none';
+}
+
+menuToggle.addEventListener('click', openMenu);
+menuClose.addEventListener('click', closeMenu);
+menuOverlay.addEventListener('click', closeMenu);
+
+navLinks.forEach((link) => {
+	link.addEventListener('click', closeMenu);
+});
+
+// ------------- DROPDOWN MENU
+
+function addHeartListeners() {
+	const hearts = document.querySelectorAll('.featured__product--heart-icon');
+
+	hearts.forEach((heart) => {
+		heart.addEventListener('click', (e) => {
+			e.stopPropagation();
+
+			const isEmpty = heart.dataset.state === 'empty';
+
+			heart.style.backgroundImage = isEmpty
+				? "url('src/icons/heart_fill.svg')"
+				: "url('src/icons/heart_empty.svg')";
+
+			heart.dataset.state = isEmpty ? 'filled' : 'empty';
+		});
+	});
+}
+
 // ------------- SWIPER
 
 const swiper = new Swiper('.featured__swiper', {
@@ -236,7 +236,7 @@ const swiper = new Swiper('.featured__swiper', {
 		el: '.swiper-scrollbar',
 		draggable: true,
 		dragSize: 'auto',
-		hide: true,
+		hide: false,
 	},
 
 	breakpoints: {
